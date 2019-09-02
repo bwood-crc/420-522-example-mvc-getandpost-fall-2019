@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h3>The World's Greatest Hello World Program</h3>
+
+<form action="@Url.Action("Index","Home")" method="post">
+    <p>Please enter your name here:</p>
+    <input id="firstName" name="firstName" type="text" value="@ViewBag.FirstName" />
+    <input type="submit" />
+
+</form>
+
+
+@if (ViewBag.FirstName != null)
+{
+    //<h3>Hello, @ViewData["firstName"]</h3>
+
+    <h3>Hello, @ViewBag.FirstName</h3>
+}
